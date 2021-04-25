@@ -1,0 +1,24 @@
+<!doctype html>
+    <html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Tag_Game</title>
+    </head>
+    <body>
+    <p align='right'>{{nickname}}</p>
+    <h1 align="center">Игра Пятнашки</h1>
+
+    <p align="center"><input type="button" style="height:30px;width:220px" value="Старт" onclick="window.location.href = 'http://127.0.0.1:8080/tag_game?start=1'"></p>
+    <p align="center">Затрачено времени: {{timedelta}}</p>
+    <p align="center">Всего ходов: {{motion}}</p>
+    <h2 align="center">Вы выиграли</h2>
+    <p align="center">Введите имя:</p>
+     <form align="center" action="/records" method="post">
+     <input type="text" name='nicknamee' >
+    <p align="center"><input type="submit"></p>
+     </form>
+    <p align="center"><input type="button" style="height:30px;width:220px" value="Все результаты" onclick="window.location.href = 'http://127.0.0.1:8080/records'"></p>
+
+    </body>
+    </html>

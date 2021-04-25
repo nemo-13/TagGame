@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Все результаты</title>
+</head>
+<body>
+<p align='right'>{{nickname}}</p>
+<h1 align="center">Результаты всех участников</h1>
+<p align="center"><input type="button" style="height:50px;width:220px" value="Играть" onclick="window.location.href = 'http://127.0.0.1:8080/tag_game?start=1'"></p>
+<table align="center" border="1">
+        <tbody>
+        <tr>
+            <td style="height:30px;width:30px" align="center">Место</td>
+            <td style="height:30px;width:220px" align="center">Никнейм</td>
+            <td style="height:30px;width:60px" align="center">Ходы</td>
+            <td style="height:30px;width:60px" align="center">Время</td>
+        </tr>
+        <tr>
+             {{ stroki |safe }}
+        </tr>
+        </tbody>
+</table>
+</body>
+</html>

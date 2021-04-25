@@ -1,0 +1,75 @@
+<!doctype html>
+    <html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Tag_Game</title>
+    </head>
+    <body>
+    <p align='right'>{{nickname}}
+    <a href='http://127.0.0.1:8080/tag_game?delete=1'>X</a></p>
+    <h1 align="center">Игра Пятнашки</h1>
+
+    <p align="center"><input type="button" style="height:30px;width:220px" value="Старт" onclick="window.location.href = 'http://127.0.0.1:8080/tag_game?start=1'"></p>
+    <p align="center">Затрачено времени: {{timedelta}}</p>
+    <p align="center">Всего ходов: {{motion}}</p>
+
+    <table align="center" border="1">
+        <tbody>
+        <tr>
+            <td><input type="button" style="height:50px;width:50px" onclick="window.location.href = 'http://127.0.0.1:8080/tag_game?row=1&column=1&motion=1'" value={{mas[0][0]}}></td>
+            <td><input type="button" style="height:50px;width:50px" onclick="window.location.href = 'http://127.0.0.1:8080/tag_game?row=1&column=2&motion=1'" value={{mas[0][1]}}></td>
+            <td><input type="button" style="height:50px;width:50px" onclick="window.location.href = 'http://127.0.0.1:8080/tag_game?row=1&column=3&motion=1'" value={{mas[0][2]}}></td>
+            <td><input type="button" style="height:50px;width:50px" onclick="window.location.href = 'http://127.0.0.1:8080/tag_game?row=1&column=4&motion=1'" value={{mas[0][3]}}></td>
+        </tr>
+        <tr>
+            <td><input type="button" style="height:50px;width:50px" onclick="window.location.href = 'http://127.0.0.1:8080/tag_game?row=2&column=1&motion=1'" value={{mas[1][0]}}></td>
+            <td><input type="button" style="height:50px;width:50px" onclick="window.location.href = 'http://127.0.0.1:8080/tag_game?row=2&column=2&motion=1'" value={{mas[1][1]}}></td>
+            <td><input type="button" style="height:50px;width:50px" onclick="window.location.href = 'http://127.0.0.1:8080/tag_game?row=2&column=3&motion=1'" value={{mas[1][2]}}></td>
+            <td><input type="button" style="height:50px;width:50px" onclick="window.location.href = 'http://127.0.0.1:8080/tag_game?row=2&column=4&motion=1'" value={{mas[1][3]}}></td>
+        </tr>
+        <tr>
+            <td><input type="button" style="height:50px;width:50px" onclick="window.location.href = 'http://127.0.0.1:8080/tag_game?row=3&column=1&motion=1'" value={{mas[2][0]}}></td>
+            <td><input type="button" style="height:50px;width:50px" onclick="window.location.href = 'http://127.0.0.1:8080/tag_game?row=3&column=2&motion=1'" value={{mas[2][1]}}></td>
+            <td><input type="button" style="height:50px;width:50px" onclick="window.location.href = 'http://127.0.0.1:8080/tag_game?row=3&column=3&motion=1'" value={{mas[2][2]}}></td>
+            <td><input type="button" style="height:50px;width:50px" onclick="window.location.href = 'http://127.0.0.1:8080/tag_game?row=3&column=4&motion=1'" value={{mas[2][3]}}></td>
+        </tr>
+        <tr>
+            <td><input type="button" style="height:50px;width:50px" onclick="window.location.href = 'http://127.0.0.1:8080/tag_game?row=4&column=1&motion=1'" value={{mas[3][0]}}></td>
+            <td><input type="button" style="height:50px;width:50px" onclick="window.location.href = 'http://127.0.0.1:8080/tag_game?row=4&column=2&motion=1'" value={{mas[3][1]}}></td>
+            <td><input type="button" style="height:50px;width:50px" onclick="window.location.href = 'http://127.0.0.1:8080/tag_game?row=4&column=3&motion=1'" value={{mas[3][2]}}></td>
+            <td><input type="button" style="height:50px;width:50px" onclick="window.location.href = 'http://127.0.0.1:8080/tag_game?row=4&column=4&motion=1'" value={{mas[3][3]}}></td>
+        </tr>
+        </tbody>
+    </table>
+    <br>
+    # <p align="center"><input type="button" style="height:30px;width:220px" value="Все результаты" onclick="window.location.href = 'http://127.0.0.1:8080/records'"></p>
+    <table align="center" border="1">
+        <tbody>
+        <tr>
+            <td style="height:30px;width:30px" align="center">Место</td>
+            <td style="height:30px;width:220px" align="center">Никнейм</td>
+            <td style="height:30px;width:60px" align="center">Ходы</td>
+            <td style="height:30px;width:60px" align="center">Время</td>
+        </tr>
+        <tr>
+            <td style="height:30px;width:30px">1</td>
+            <td style="height:30px;width:220px">{{result[0][1]}}</td>
+            <td style="height:30px;width:60px">{{result[0][2]}}</td>
+            <td style="height:30px;width:60px">{{result[0][3]}}</td>
+        </tr>
+        <tr>
+            <td style="height:30px;width:30px">2</td>
+            <td style="height:30px;width:220px">{{result[1][1]}}</td>
+            <td style="height:30px;width:60px">{{result[1][2]}}</td>
+            <td style="height:30px;width:60px">{{result[1][3]}}</td>
+        </tr><tr>
+            <td style="height:30px;width:30px">3</td>
+            <td style="height:30px;width:220px">{{result[2][1]}}</td>
+            <td style="height:30px;width:60px">{{result[2][2]}}</td>
+            <td style="height:30px;width:60px">{{result[2][3]}}</td>
+        </tr>
+        </tbody>
+        </table>
+    </body>
+    </html>
